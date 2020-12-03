@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "13584ae5-c050-44d9-b940-199f7a232611",
+		"name": "RollingCode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Turnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/turnos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"turnos"
+					]
+				},
+				"description": "Me trae todos los turnos."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/status",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"status"
+					]
+				},
+				"description": "Me devuelve un OK si el servidor esta funcionando."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Turno por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/turnos/5fb70bdbe5f3586948014ac4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"turnos",
+						"5fb70bdbe5f3586948014ac4"
+					]
+				},
+				"description": "Me devuelve un turno por id."
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un Turno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/turnos/5fb70bdbe5f3586948014ac4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"turnos",
+						"5fb70bdbe5f3586948014ac4"
+					]
+				},
+				"description": "Elimino un turno."
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar Turnos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"nombre\": \"Firulais\",\n      \"nombreDueno\": \"Martin\",\n      \"fecha\": \"10/11/2020\",\n      \"hora\": \"12\",\n      \"sintomas\": \"12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/turnos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"turnos"
+					]
+				},
+				"description": "Inserto un turno en la base de datos."
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Turno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"nombre\": \"Manuelita\",\n      \"nombreDueno\": \"Alejo\",\n      \"fecha\": \"10/11/2020\",\n      \"hora\": \"12\",\n      \"sintomas\": \"12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/turnos/5fb70c2ae5f3586948014ac5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"turnos",
+						"5fb70c2ae5f3586948014ac5"
+					]
+				},
+				"description": "Modifico un turno existente en la base de datos."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
